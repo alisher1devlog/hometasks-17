@@ -1,0 +1,76 @@
+/* Body umumiy style */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9fafc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Asosiy container */
+main {
+  text-align: center;
+}
+
+/* Sarlavha */
+h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #111;
+  letter-spacing: 1px;
+}
+
+/* Counter qiymati */
+#counter-value {
+  font-size: 3rem;
+  margin: 1rem auto;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background-color: #e5ebff;
+  color: #111;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  user-select: none;
+}
+
+/* Tugmalar joylashuvi */
+.btn-area {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* Tugmalar */
+button {
+  background-color: #5c6bc0;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Hover effekti */
+button:hover {
+  background-color: #3f4a94;
+  transform: translateY(-2px);
+}
+
+/* Reset tugmasi alohida rangda */
+.btn-reset {
+  background-color: #7e57c2;
+}
+.btn-reset:hover {
+  background-color: #5e35b1;
+}
