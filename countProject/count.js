@@ -10,7 +10,7 @@ btnDecreaseEl.addEventListener("click", () => {
     counterValueEl.innerHTML =count ;
 });
 btnIncreaseEl.addEventListener("click", () =>{
-    count+=1000;
+    count++;
     counterValueEl.innerHTML = count;
 });
 btnResetEl.addEventListener("click", ()=> {
