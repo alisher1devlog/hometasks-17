@@ -1,22 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Thanks for registration</title>
-        <link rel="stylesheet" href="./form2Style.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanks for registration</title>
+    <link rel="stylesheet" href="./form2Style.css">
+</head>
 
-    <body>
-        <div class="submit-msg-inner">
-            <h1>Thanks <span id="msgName"></span> for Your Registration.</h1>
-            <button onclick="previewForm()" class="preview-btn">
-                Preview Form
-            </button>
-        </div>
-        <script src="./form.js"></script>
-        <script src="./validation.js"></script>
-    </body>
+<body>
+    <div class="submit-msg-inner">
+        <h1>Thanks <span id="msgName"></span> for Your Registration.</h1>
+        <button onclick="previewForm()" class="preview-btn">
+            Preview Form
+        </button>
+    </div>
+    <script src="./form.js"></script>
+    <script src="./validation.js"></script>
+    <script>
+        const msgNameEl = document.querySelector("#msgName");
+        const savedName = localStorage.getItem("registeredName");
+
+        if (savedName) {
+            msgNameEl.textContent = savedName;
+        }
+    </script>
+</body>
 
 </html>

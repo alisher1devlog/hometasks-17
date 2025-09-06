@@ -5,7 +5,7 @@ const retypePasswordEl = document.querySelector("#retypePassword");
 const formEl = document.querySelector("#form");
 const msgNameEl = document.querySelector("#msgName");
 
-nameEl.addEventListener("input", (e)=>{
+nameEl.addEventListener("input", (e) => {
     const name = nameEl.value;
     const errorDivName = document.querySelector("#userNameError")
 
@@ -13,13 +13,13 @@ nameEl.addEventListener("input", (e)=>{
         nameEl.classList.add("error");
         errorDivName.textContent = "Ism kamida 3 ta harf bo'lishi kerak!";
         errorDivName.style.display = "block";
-    }else{
+    } else {
         nameEl.classList.remove("error");
         errorDivName.style.display = "none";
     }
 });
 
-emailEl.addEventListener("input", (e)=>{
+emailEl.addEventListener("input", (e) => {
     const email = emailEl.value;
     const errorDivEmail = document.querySelector("#emailError");
 
@@ -27,13 +27,13 @@ emailEl.addEventListener("input", (e)=>{
         emailEl.classList.add("error");
         errorDivEmail.textContent = "Emailda kamida bitta @, bitta . orasida harf bo'lishi lozim!.";
         errorDivEmail.style.display = "block";
-    }else{
+    } else {
         emailEl.classList.remove("error");
         errorDivEmail.style.display = "none";
     }
 });
 
-passwordEl.addEventListener("input", (e)=>{
+passwordEl.addEventListener("input", (e) => {
     const password = passwordEl.value;
     const errorDivPassword = document.querySelector("#passwordError");
 
@@ -41,12 +41,12 @@ passwordEl.addEventListener("input", (e)=>{
         passwordEl.classList.add("error");
         errorDivPassword.textContent = "password kamida bitta 8 ta belgidan iborat bo'lishi lozim!.";
         errorDivPassword.style.display = "block";
-    }else{
+    } else {
         passwordEl.classList.remove("error");
         errorDivPassword.style.display = "none"
     }
 });
-retypePasswordEl.addEventListener("input",(e)=>{
+retypePasswordEl.addEventListener("input", (e) => {
     const retypePassword = retypePasswordEl.value;
     const errorDivretypePassword = document.querySelector("#retypePasswordError");
 
@@ -54,19 +54,20 @@ retypePasswordEl.addEventListener("input",(e)=>{
         retypePasswordEl.classList.add("error");
         errorDivretypePassword.textContent = "Retype Password kamida bitta 8 ta belgidan iborat bo'lishi va tepadagi password bilan bir xil bo'lishi lozim!.";
         errorDivretypePassword.style.display = "block";
-    }else{
+    } else {
         retypePasswordEl.classList.remove("error");
         errorDivretypePassword.style.display = "none"
     }
 
 })
 
-formEl.addEventListener("submit", (e)=> {
+formEl.addEventListener("submit", (e) => {
     e.preventDefault();
     const name = nameEl.value;
     const email = emailEl.value;
     const password = passwordEl.value;
     const retypePassword = retypePasswordEl.value;
+    // const msgName = msgNameEl.value;
 
     const errorDivName = document.querySelector("#userNameError")
 
@@ -74,7 +75,7 @@ formEl.addEventListener("submit", (e)=> {
         nameEl.classList.add("error");
         errorDivName.textContent = "Ism kamida 3 ta harf bo'lishi kerak!";
         errorDivName.style.display = "block";
-    }else{
+    } else {
         nameEl.classList.remove("error");
         errorDivName.style.display = "none";
     }
@@ -85,7 +86,7 @@ formEl.addEventListener("submit", (e)=> {
         emailEl.classList.add("error");
         errorDivEmail.textContent = "Emailda kamida bitta @, bitta . orasida harf bo'lishi lozim!.";
         errorDivEmail.style.display = "block";
-    }else{
+    } else {
         emailEl.classList.remove("error");
         errorDivEmail.style.display = "none";
     }
@@ -96,7 +97,7 @@ formEl.addEventListener("submit", (e)=> {
         passwordEl.classList.add("error");
         errorDivPassword.textContent = "password kamida bitta 8 ta belgidan iborat bo'lishi lozim!.";
         errorDivPassword.style.display = "block";
-    }else{
+    } else {
         passwordEl.classList.remove("error");
         errorDivPassword.style.display = "none"
     }
@@ -107,12 +108,13 @@ formEl.addEventListener("submit", (e)=> {
         retypePasswordEl.classList.add("error");
         errorDivretypePassword.textContent = "Retype Password kamida bitta 8 ta belgidan iborat bo'lishi va tepadagi password bilan bir xil bo'lishi lozim!.";
         errorDivretypePassword.style.display = "block";
-    }else{
+    } else {
         retypePasswordEl.classList.remove("error");
         errorDivretypePassword.style.display = "none"
     }
-    if(validateName(name) && validateEmail(email) && validatePassword(password) && password === retypePassword){
-    window.location.href = "form2.html"; 
-    msgNameEl.value = nameEl.value;
+    if (validateName(name) && validateEmail(email) && validatePassword(password) && password === retypePassword) {
+        localStorage.setItem("registeredName", name);
+        window.location.href = "form2.html";
+
     }
 })
