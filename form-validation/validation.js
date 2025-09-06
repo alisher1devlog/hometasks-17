@@ -6,5 +6,5 @@ function validatePassword(password){
     return password.length >= 8;
 }
 function validateName(name) {
-    return name.length >= 2 && /^[a-zA-Z\s]+$/.test(name);
+  return name.length >= 3 && /^[a-zA-Z\s]+$/.test(name);
 }
