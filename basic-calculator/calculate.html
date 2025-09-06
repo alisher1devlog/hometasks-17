@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Basic Calculator</title>
+    <link rel="stylesheet" href="./calculateStyle.css">
+</head>
+
+<body>
+    <div class="container">
+        <form class="form" id="form">
+            <div id="result">
+                <p>
+                    Result:
+                    <span id="finalResult"></span>
+                </p>
+            </div>
+            <div>
+                <label for="number1">Number 1</label>
+                <input type="number" id="number1">
+            </div>
+            <div>
+                <label for="number2">Number 2</label>
+                <input type="number" id="number2">
+            </div>
+            <div>
+                <p class="mb-2">Operator</p>
+                <select id="operator" name="operator" required="">
+                    <option value="" selected="" disabled="">Choose Operator</option>
+                    <option value="add">Add(+)</option>
+                    <option value="min">Minus(-)</option>
+                    <option value="mul">Multiply(*)</option>
+                    <option value="div">Divide(/)</option>
+                </select>
+                <button type="submit" class="btn btn-info mb-2" onclick="calc()">
+                    Calculate
+                </button>
+                <button type="button" onclick="resetBtn()" class="btn btn-warning">
+                    Reset
+                </button>
+            </div>
+        </form>
+    </div>
+    <script src="./calculate.js"></script>
+</body>
+
+</html>
