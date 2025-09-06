@@ -81,3 +81,21 @@ input[type="password"]:focus {
 .btn:hover {
   background: linear-gradient(90deg, #5a4ae0, #5f72e9);
 }
+.error {
+    border-color: #e74c3c !important;
+    background: #fdf2f2;
+}
+
+.error-message {
+    color: #e74c3c;
+    font-size: 14px;
+    display: none;
+}
+
+.success-message {
+    color: #27ae60;
+    padding: 10px;
+    background: #d4edda;
+    border-radius: 5px;
+    margin: 10px 0;
+}
